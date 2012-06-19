@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20120501030829) do
     t.integer  "warning_count"
     t.integer  "repository_id"
     t.string   "aasm_state"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.string   "last_commit_id"
     t.text     "last_commit_message"
     t.integer  "position"
@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(:version => 20120501030829) do
     t.datetime "locked_at"
     t.datetime "failed_at"
     t.string   "locked_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.string   "queue"
   end
 
@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(:version => 20120501030829) do
     t.string   "table"
     t.integer  "month",      :limit => 2
     t.integer  "year",       :limit => 8
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
@@ -88,8 +88,8 @@ ActiveRecord::Schema.define(:version => 20120501030829) do
     t.boolean  "private"
     t.boolean  "fork"
     t.datetime "pushed_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
     t.integer  "github_id"
     t.string   "html_url"
     t.string   "ssh_url"
@@ -105,7 +105,7 @@ ActiveRecord::Schema.define(:version => 20120501030829) do
   create_table "user_repositories", :force => true do |t|
     t.integer "user_id"
     t.integer "repository_id"
-    t.boolean "own",           :default => true
+    t.boolean "own",           :default => true, :null => false
   end
 
   add_index "user_repositories", ["repository_id"], :name => "index_user_repositories_on_repository_id"
@@ -122,8 +122,8 @@ ActiveRecord::Schema.define(:version => 20120501030829) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
     t.integer  "github_uid"
     t.string   "nickname"
     t.string   "name"
