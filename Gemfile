@@ -43,6 +43,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'thin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -52,13 +53,13 @@ gem 'jquery-rails'
 
 group :production do
   gem 'therubyracer'
+  gem 'pg'
 end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-  gem 'thin'
   gem 'rb-fsevent'
   gem 'annotate', :git => "git://github.com/ctran/annotate_models.git"
   gem 'guard'
