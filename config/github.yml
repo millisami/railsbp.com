@@ -1,3 +1,7 @@
+production:
+  key: YOUR_KEY
+  secret: YOUR_SECRET
+
 development:
   key: YOUR_KEY
   secret: YOUR_SECRET
