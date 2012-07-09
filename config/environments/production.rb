@@ -58,10 +58,10 @@ RailsbpCom::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => "railsbp.com", :protocol => "http" }
+  config.action_mailer.default_url_options = { :host => "millireview.herokuapp.com", :protocol => "http" }
 
   config.middleware.use ExceptionNotifier,
-    :email_prefix => "[railsbp.com] ",
-    :sender_address => %{"Application Error" <exception.notifier@railsbp.com>},
-    :exception_recipients => %w{flyerhzm@railsbp.com}
+    :email_prefix => "[millireview.herokuapp.com] ",
+    :sender_address => %{"Application Error" <exception.notifier@millisami.herokuapp.com>},
+    :exception_recipients => %w{millisami@cloudfactory.com}
 end

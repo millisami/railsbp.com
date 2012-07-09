@@ -1,6 +1,6 @@
 production:
-  key: YOUR_KEY
-  secret: YOUR_SECRET
+  key: 0743be1375720ea95ba8
+  secret: 051bf9ea9dc7e0177d8b4a5414194c15122ad26d
 
 development:
   key: YOUR_KEY
