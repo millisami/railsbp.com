@@ -49,12 +49,12 @@ gem 'thin'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 
-group :production do
-  gem 'therubyracer'
-  gem 'pg'
-end
+# group :production do
+#   gem 'therubyracer'
+#   gem 'pg'
+# end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
@@ -70,6 +70,7 @@ group :development do
   gem 'guard-annotate'
 
   # Deploy with Capistrano
+  gem 'rvm-capistrano'
   gem 'capistrano'
   gem 'capistrano_colors'
   gem 'capistrano-ext'
