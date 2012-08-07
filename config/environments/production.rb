@@ -40,7 +40,7 @@ RailsbpCom::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = "http://millireview.herokuapp.com"
+  config.action_controller.asset_host = "http://railsbp.cloudfactory.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
@@ -58,10 +58,12 @@ RailsbpCom::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => "millireview.herokuapp.com", :protocol => "http" }
-
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { :host => "railsbp.cloudfactory.com", :protocol => "http" }
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.sendmail_settings = { :location => '/usr/bin/mail' }
   config.middleware.use ExceptionNotifier,
-    :email_prefix => "[millireview.herokuapp.com] ",
-    :sender_address => %{"Application Error" <exception.notifier@millisami.herokuapp.com>},
+    :email_prefix => "[railsbp_cf] ",
+    :sender_address => %{"Application Error" <noreply@railsbp.cloudfactory.com>},
     :exception_recipients => %w{millisami@cloudfactory.com}
 end
